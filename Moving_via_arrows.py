@@ -22,7 +22,12 @@ def wait():
 
 
 
+#Checking if writer/eraser was pushed/pulled before
+check_w=True
+check_e=True
+
 #There will be motions soon
+
 while True:
     if keyboard.is_pressed('up arrow'):
         wait()
@@ -45,16 +50,31 @@ while True:
         #motorB.on(-20)
         #motorB.off(brake=True)    
     elif keyboard.is_pressed('space'):
-        print('Land the WRITERRRR')
-            #while True:
-                #if ts1.value() == 0:
-                    #motorC.stop(stop_action="brake")
-                #else:
-                    #motorC.on(20)
+        check_w=not(check_w)
+        if check_w:
+            print('TAKE OFF the WRITERRRR')
+            #motorC.on(-100)
+            #motorC.off(brake=True)
+        else: 
+            print('Land the WRITERRRR')
+                #while True:
+                    #if ts1.value() == 0:
+                        #motorC.stop(stop_action="brake")
+                    #else:
+                        #motorC.on(20)
     elif keyboard.is_pressed('backspace'):
-        print('TAKE OFF the WRITERRRR')
-        #motorC.on(-100)
-        #motorC.off(brake=True) 
+        check_e=not(check_e)
+        if check_e:
+            print('TAKE OFF the ERASERRRR')
+            #motorC.on(100)
+            #motorC.off(brake=True)
+        else: 
+            print('Land the ERASERRR')
+                #while True:
+                    #if ts1.value() == 0:
+                        #motorC.stop(stop_action="brake")
+                    #else:
+                        #motorC.on(-20)
     elif keyboard.is_pressed('ctrl+c'):
         print('It is the END of our WORK')
         break
