@@ -2,6 +2,8 @@
 #import time
 #import math
 #from ev3dev2.motor import *
+#from ev3dev2.sensor import INPUT_2
+#from ev3dev2.sensor.lego import TouchSensor
 import keyboard
 import pynput.keyboard as pynput
 import msvcrt as m
@@ -14,6 +16,10 @@ def wait():
 
 #motorA = LargeMotor(OUTPUT_A)
 #motorB = LargeMotor(OUTPUT_B)
+#ts = TouchSensor(INPUT_2)
+#motorC = LargeMotor(OUTPUT_c)
+
+
 
 
 #There will be motions soon
@@ -38,6 +44,17 @@ while True:
         print('go right')
         #motorB.on(-20)
         #motorB.off(brake=True)    
+    elif keyboard.is_pressed('space'):
+        print('Land the WRITERRRR')
+            #while True:
+                #if ts1.value() == 0:
+                    #motorC.stop(stop_action="brake")
+                #else:
+                    #motorC.on(20)
+    elif keyboard.is_pressed('backspace'):
+        print('TAKE OFF the WRITERRRR')
+        #motorC.on(-100)
+        #motorC.off(brake=True) 
     elif keyboard.is_pressed('ctrl+c'):
         print('It is the END of our WORK')
         break
