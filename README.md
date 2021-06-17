@@ -26,5 +26,12 @@
 * крепление для опускания/подъёма карандаша
 5. Блоки *Lego EV3* для каждой оси (3 штуки)
 
+## Making drawing / writing robot
 
-## Making drowing / writing robot
+Подключение моторов к соответствующим портам на EV3
+```
+motorA = motor(myev3,'A')
+motorB = motor(myev3,'B')
+motorC = motor(myev3,'C')
+```
+
