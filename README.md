@@ -28,10 +28,4 @@
 
 ## Making drawing / writing robot
 
-Подключение моторов к соответствующим портам на EV3
-```
-motorA = motor(myev3,'A')
-motorB = motor(myev3,'B')
-motorC = motor(myev3,'C')
-```
-
+[Пример работы робота](https://drive.google.com/file/d/1FAD7zE_WIPlvrzDgCZBnQWeJByxbpj38/view?usp=sharing)
